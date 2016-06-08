@@ -20,3 +20,13 @@ Feature: als klant wil ik producten kunnen bestellen.
     Examples:
       | productname |
       | Hawai,Bbq   |
+
+  Scenario Outline: als klant wil ik éen product kunnen bestellen met extra toevoeging(en).
+    Given: een klant opent de homepagina
+    When: een klant kiest producten <productnamen> met toevoeging(en) <toevoeging>
+    When: een klant gaat verder en vult gegevens in
+    Then: een klant heeft succesvol besteld
+
+    Examples:
+      | productname | toevoeging |
+      | Hawai       | Salami     |
