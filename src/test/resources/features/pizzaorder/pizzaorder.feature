@@ -1,5 +1,5 @@
 #language:nl
-  Functionaliteit: als klant wil ik producten kunnen bestellen.
+Functionaliteit: als klant wil ik producten kunnen bestellen.
 
   Abstract Scenario: als klant wil ik één product kunnen bestellen.
     Gegeven  een klant opent de homepagina
@@ -8,7 +8,7 @@
     Dan : een klant heeft succesvol besteld
 
     Voorbeelden:
-      | productname |
+      | productnaam |
       | Hawai       |
       | Bbq         |
 
@@ -19,8 +19,8 @@
     Dan : een klant heeft succesvol besteld
 
     Voorbeelden:
-      | productname |
-      | Hawai,Bbq   |
+      | productnamen |
+      | Hawai,Bbq    |
 
   Abstract Scenario: als klant wil ik éen product kunnen bestellen met extra toevoeging(en).
     Gegeven : een klant opent de homepagina
@@ -29,5 +29,5 @@
     Dan : een klant heeft succesvol besteld
 
     Voorbeelden:
-      | productname | toevoeging |
-      | Hawai       | Salami     |
+      | productnamen | toevoeging |
+      | Hawai        | Salami     |
