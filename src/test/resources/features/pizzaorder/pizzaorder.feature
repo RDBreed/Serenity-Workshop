@@ -1,32 +1,33 @@
-Feature: als klant wil ik producten kunnen bestellen.
+#language:nl
+  Functionaliteit: als klant wil ik producten kunnen bestellen.
 
-  Scenario Outline: als klant wil ik één product kunnen bestellen.
-    Given: een klant opent de homepagina
-    When: een klant kiest een product <productnaam>
-    When: een klant gaat verder en vult gegevens in
-    Then: een klant heeft succesvol besteld
+  Abstract Scenario: als klant wil ik één product kunnen bestellen.
+    Gegeven  een klant opent de homepagina
+    Als een klant kiest een product <productnaam>
+    En : een klant gaat verder en vult gegevens in
+    Dan : een klant heeft succesvol besteld
 
-    Examples:
+    Voorbeelden:
       | productname |
       | Hawai       |
       | Bbq         |
 
-  Scenario Outline: als klant wil ik meerdere producten kunnen bestellen.
-    Given: een klant opent de homepagina
-    When: een klant kiest producten <productnamen>
-    When: een klant gaat verder en vult gegevens in
-    Then: een klant heeft succesvol besteld
+  Abstract Scenario: als klant wil ik meerdere producten kunnen bestellen.
+    Gegeven : een klant opent de homepagina
+    Als : een klant kiest producten <productnamen>
+    En : een klant gaat verder en vult gegevens in
+    Dan : een klant heeft succesvol besteld
 
-    Examples:
+    Voorbeelden:
       | productname |
       | Hawai,Bbq   |
 
-  Scenario Outline: als klant wil ik éen product kunnen bestellen met extra toevoeging(en).
-    Given: een klant opent de homepagina
-    When: een klant kiest producten <productnamen> met toevoeging(en) <toevoeging>
-    When: een klant gaat verder en vult gegevens in
-    Then: een klant heeft succesvol besteld
+  Abstract Scenario: als klant wil ik éen product kunnen bestellen met extra toevoeging(en).
+    Gegeven : een klant opent de homepagina
+    Als : een klant kiest producten <productnamen> met toevoeging(en) <toevoeging>
+    En : een klant gaat verder en vult gegevens in
+    Dan : een klant heeft succesvol besteld
 
-    Examples:
+    Voorbeelden:
       | productname | toevoeging |
       | Hawai       | Salami     |
